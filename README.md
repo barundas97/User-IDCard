@@ -1,3 +1,6 @@
-Project Description - Create UserID Cards from Json placeholder API .Get API through XMLHttpRequest (XHR) objects.
+Project  -  User Id cards.
 
-Languages are used - Html ,Css ,Javascript.
+Project Description - Created User Id cards through Ajax in javascript through XHR (httpXMLRequest) .
+To get JSON file of user data from API to created user Name,Id and email .
+
+Technologies are used - HTML5, Css, Ajax in JavaScript (XHR).
