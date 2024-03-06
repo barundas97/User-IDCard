@@ -1,6 +1,6 @@
 Project  -  User Id cards.
 
-Project Description - Created User Id cards through Ajax in javascript through XHR (httpXMLRequest) .
-To get JSON file of user data from API to created user Name,Id and email .
+Project Description - Created UserID cards through Ajax(XMLHttpRequest) in javascript
+To get JSON file of user data from API to created UserName,Id,Email & Address .
 
-Technologies are used - HTML5, Css, Ajax in JavaScript (XHR).
+Technologies are used - HTML5, Css, Ajax in JavaScript.
