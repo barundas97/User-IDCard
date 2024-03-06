@@ -1,38 +1,30 @@
-// Define the request URL
-const url = 'https://jsonplaceholder.typicode.com/users';
+const url = "https://jsonplaceholder.typicode.com/users";
 
-
-// Create a new XMLHttpRequest object
+// creating a XMLHttpRequest Object 
 const xhr = new XMLHttpRequest();
+xhr.open("GET",url);
 
-
-// Configure the request
-xhr.open('GET', url);
-
-// Set up event listener for when the request is loaded
-xhr.onload = function() {
-    // Parse the JSON response
+// set a event listener for when the request is loaded
+xhr.onload = function(){
     const users = JSON.parse(xhr.responseText);
-    
-    // Display user data in cards
-    displayUserData(users);
-};
-
-// Send the request
+    // display user Data in cards;
+    displayUsersData(users);
+}
+// send the request
 xhr.send();
 
-function displayUserData(users) {
-    for(let i = 0 ; i < users.length; i++){
+// create a function for displayUserData--
+function displayUsersData(users){
+    let container = document.querySelector("#container");
+    // we use for loop here for display data inside the card
+    for(let i = 0 ; i< users.length; i++){
+        let div = document.createElement("div");
+        div.classList = "card";
+        div.innerHTML = `<h2>User Name: ${users[i]?.name}</h2> 
+                          <h3>User ID: ${users[i]?.id}</h3>
+                          <p>User Email: ${users[i]?.email}</p>
+                          <p>User Address: ${users[i]?.address?.city}</p>` //This is Optional Chaining for avoid showing Error---
 
-        const container = document.querySelector(".container"); 
-// creating element through the loop
-        const user = document.createElement("div");  
-        user.id = `user${i}`;
-        user.classList = "card";
-        user.innerHTML = `<h2>${users[i]?.name}; 
-                           <p> User Id : ${users[i]?.id}
-                           <p>User gmail : ${users[i]?.email}</p>`
-        container.appendChild(user);
-                           
-  }
-}
+                        container.appendChild(div);            
+    }
+};
